@@ -63,7 +63,7 @@ The system supports both automatic and manual irrigation while continuously trac
 ## HMI Visualization
 
 <p align="center">
-    <img src="docs/screenshots/visualization.png" width="900">
+    <img src="https://github.com/gienyne/AquaControl/blob/main/docs/screenshots/HMI.png" width="900">
 </p>
 
 The visualization allows the operator to
