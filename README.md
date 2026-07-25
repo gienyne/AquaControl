@@ -154,6 +154,6 @@ AquaControl/
 ---
 ## Demo 
 
-https://github.com/user-attachments/assets/c1cdde5f-29f2-43c2-8b56-9b731386461f
+https://github.com/user-attachments/assets/b353115c-568e-483c-9320-cfed50007522
 
 ---
