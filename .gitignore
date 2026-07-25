@@ -1,0 +1,6 @@
+*.~u
+*.opt
+*BOOTINFO*
+*COMPILEINFO*
+*.precompilecache
+*.html
