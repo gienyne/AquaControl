@@ -119,10 +119,10 @@ AquaControl/
 ├── .gitignore
 │
 ├── plc_server/
-│   └── SmartIrrigation.project
+│   └── Aqua_Control.project
 │
 ├── plc_client/
-│   └── SmartIrrigation_UaExpert.uap
+│   └── Aqua_Control_UaExpert.uap
 │
 └── docs/
     ├── architecture/
