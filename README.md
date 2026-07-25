@@ -1,106 +1,118 @@
-# Smart Irrigation
+# AquaControl
 
-> **PLC-based irrigation control system with an embedded OPC UA server for real-time industrial monitoring and control.**
+> Industrial PLC application for smart irrigation with an embedded OPC UA Server for real-time monitoring and control.
 
 ![CODESYS](https://img.shields.io/badge/CODESYS-V3.5_SP22-blue)
-![IEC61131-3](https://img.shields.io/badge/IEC_61131--3-Structured_Text-success)
-![OPC UA](https://img.shields.io/badge/OPC_UA-IEC_62541-orange)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![IEC 61131-3](https://img.shields.io/badge/IEC-61131--3-orange)
+![OPC UA](https://img.shields.io/badge/OPC_UA-IEC_62541-green)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
 ---
 
 ## Overview
 
-Smart Irrigation is an industrial automation project developed with **CODESYS V3.5** using **Structured Text (IEC 61131-3)**.
+AquaControl is an industrial automation project developed with **CODESYS V3.5 SP22**.
 
-The system simulates an automated irrigation process supplied by two independent water sources:
+The application simulates an irrigation process supplied by two independent water sources: a rainwater storage tank and a municipal water supply. An embedded **OPC UA Server** exposes the PLC process variables, allowing external OPC UA clients such as **UaExpert** to monitor and control the process in real time.
 
-- a rainwater storage tank,
-- a municipal water supply.
-
-A built-in **OPC UA Server** exposes process variables, allowing external OPC UA clients such as **UaExpert** to monitor and control the system in real time.
+The project demonstrates the implementation of PLC process logic, HMI visualization and OPC UA communication within a single industrial automation application.
 
 ---
 
-## Features
+## Key Features
 
-- PLC application developed in Structured Text (IEC 61131-3)
+- PLC application developed with CODESYS
+- IEC 61131-3 based implementation
 - Automatic and manual irrigation modes
-- Automatic switching between rainwater tank and municipal water
-- Water level monitoring
-- Total water consumption measurement
+- Automatic switching between water sources
+- Continuous tank level simulation
+- Water consumption monitoring
+- Integrated HMI visualization
 - Embedded OPC UA Server
+- Certificate-based OPC UA communication
 - Real-time monitoring using UaExpert
-- Secure OPC UA client/server communication
 
 ---
 
-# System Architecture
+## System Architecture
 
 <p align="center">
-<img src="docs/architecture/system_architecture.png" width="800">
+    <img src="docs/architecture/architecture.png" width="850">
 </p>
 
----
+The application consists of three main components:
 
-## Process Logic
-
-The irrigation process follows a simple priority rule.
-
-1. The rainwater tank is used as the primary water source.
-2. As long as water is available, the pump supplies the irrigation system.
-3. When the tank becomes empty, the PLC automatically switches to the municipal water supply by opening the valve.
-4. Both automatic and manual irrigation modes are supported.
+- **PLC Application** implemented in CODESYS
+- **Embedded OPC UA Server** exposing process variables
+- **UaExpert OPC UA Client** for supervision and interaction
 
 ---
 
-# HMI Visualization
+## Process Overview
+
+The irrigation process is supplied by two water sources.
+
+The rainwater tank is always used as the primary source. During irrigation, the PLC activates the pump to supply water from the tank.
+
+Whenever the tank becomes empty, the controller automatically switches to the municipal water supply by opening the valve. This transition is performed without operator intervention.
+
+The system supports both automatic and manual irrigation while continuously tracking the total water consumption.
+
+---
+
+## HMI Visualization
 
 <p align="center">
-<img src="docs/screenshots/visualization.png" width="850">
+    <img src="docs/screenshots/visualization.png" width="900">
 </p>
 
-The HMI allows the operator to
+The visualization allows the operator to
 
-- start or stop the system,
-- enable automatic mode,
-- trigger manual irrigation,
-- simulate rainfall,
-- monitor the tank level,
-- observe the current state of the pump and valve.
+- start or stop the irrigation system;
+- enable or disable automatic mode;
+- trigger manual irrigation;
+- simulate rainfall;
+- monitor the tank level;
+- observe the pump and valve states;
+- monitor the accumulated water consumption.
 
 ---
 
-# OPC UA Monitoring
+## OPC UA Connectivity
 
 <p align="center">
-<img src="docs/screenshots/uaexpert.png" width="900">
+    <img src="docs/screenshots/uaexpert.png" width="900">
 </p>
 
-The embedded OPC UA Server exposes the PLC variables to external clients.
+The embedded OPC UA Server exposes the PLC variables through its Address Space.
 
-The screenshots above show the monitored process using **UaExpert**.
+Using UaExpert, the client can
+
+- browse the Address Space;
+- read process variables;
+- write control variables;
+- monitor the process in real time.
 
 ---
 
-# OPC UA Information Model
+## OPC UA Information Model
 
 | Variable | Type | Access | Description |
-|-----------|------|:------:|-------------|
-| EIN | BOOL | RW | Main system power |
-| AutoEin | BOOL | RW | Enable automatic mode |
-| ManuelTaste | BOOL | RW | Start manual irrigation |
-| Level | REAL | R | Current tank level (L) |
-| Pumpe | BOOL | R | Pump status |
-| Ventil | BOOL | R | Water valve status |
-| Verbrauch | REAL | R | Total water consumption (L) |
+|----------|------|:------:|-------------|
+| `EIN` | BOOL | RW | Main system switch |
+| `AutoEin` | BOOL | RW | Automatic mode |
+| `ManuelTaste` | BOOL | RW | Manual irrigation |
+| `Level` | REAL | R | Tank level |
+| `Pumpe` | BOOL | R | Pump state |
+| `Ventil` | BOOL | R | Valve state |
+| `Verbrauch` | REAL | R | Total water consumption |
 
 ---
 
-# Project Structure
+## Repository Structure
 
 ```text
-SmartIrrigation/
+AquaControl/
 │
 ├── README.md
 ├── LICENSE
@@ -120,38 +132,38 @@ SmartIrrigation/
 
 ---
 
-# Technologies
+## Technologies
 
 - CODESYS V3.5 SP22
 - IEC 61131-3
-- Structured Text (ST)
 - OPC UA (IEC 62541)
 - UaExpert
 
 ---
 
-# Getting Started
+## Getting Started
 
 1. Open the CODESYS project located in `plc_server/`.
-2. Download the application to the local PLC runtime.
+2. Download the application to the CODESYS Control Win runtime.
 3. Start the PLC in **RUN** mode.
 4. Open the UaExpert project from `plc_client/`.
 5. Connect to the embedded OPC UA Server.
-6. Browse and monitor the exposed process variables.
+6. Browse the Address Space.
+7. Read and write the exposed process variables.
 
 ---
 
-# Future Improvements
+## Future Improvements
 
 - OPC UA Methods
-- Alarm & Event support
-- Historical data logging
-- MQTT integration
-- Node-RED dashboard
-- Sparkplug B integration
+- OPC UA Alarms & Events
+- Historical Data Access
+- MQTT Integration
+- Node-RED Dashboard
+- Sparkplug B Support
 
 ---
 
 ## License
 
-This project is released under the MIT License.
+Released under the MIT License.
