@@ -63,7 +63,7 @@ The system supports both automatic and manual irrigation while continuously trac
 ## HMI Visualization
 
 <p align="center">
-    <img src="https://github.com/gienyne/AquaControl/blob/main/docs/screenshots/HMI.png" width="900">
+    <img src="docs/screenshots/HMI.png" width="900">
 </p>
 
 The visualization allows the operator to
@@ -81,7 +81,7 @@ The visualization allows the operator to
 ## OPC UA Connectivity
 
 <p align="center">
-    <img src="docs/screenshots/uaexpert.png" width="900">
+    <img src="docs/screenshots/UA_Expert.png" width="900">
 </p>
 
 The embedded OPC UA Server exposes the PLC variables through its Address Space.
