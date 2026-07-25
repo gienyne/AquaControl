@@ -121,7 +121,6 @@ Using **UaExpert**, the client can
 AquaControl/
 │
 ├── README.md
-├── LICENSE
 ├── .gitignore
 │
 ├── plc_server/
