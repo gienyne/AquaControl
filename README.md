@@ -163,7 +163,3 @@ AquaControl/
 - Sparkplug B Support
 
 ---
-
-## License
-
-Released under the MIT License.
