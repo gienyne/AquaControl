@@ -152,14 +152,8 @@ AquaControl/
 7. Read and write the exposed process variables.
 
 ---
+## Demo 
 
-## Future Improvements
-
-- OPC UA Methods
-- OPC UA Alarms & Events
-- Historical Data Access
-- MQTT Integration
-- Node-RED Dashboard
-- Sparkplug B Support
+https://github.com/user-attachments/assets/c1cdde5f-29f2-43c2-8b56-9b731386461f
 
 ---
