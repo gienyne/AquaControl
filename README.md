@@ -13,7 +13,7 @@
 
 AquaControl is an industrial automation project developed with **CODESYS V3.5 SP22** that simulates a PLC-controlled irrigation system with integrated OPC UA connectivity.
 
-The application manages two independent water sources: a **rainwater storage tank** and **a municipal water supply** and automatically prioritizes the available source during irrigation. The tank level is continuously monitored, total water consumption is accumulated throughout the process, and rainfall can be simulated to dynamically refill the tank with a randomly generated volume of water.
+The application manages two independent water sources: a **rainwater storage tank -> Pumpe** and **a municipal water supply -> Ventil** and automatically prioritizes the available source during irrigation. The tank level is continuously monitored, total water consumption is accumulated throughout the process, and rainfall can be simulated to dynamically refill the tank with a randomly generated volume of water.
 
 An integrated HMI provides local supervision and control of the process, while an embedded **OPC UA Server** exposes the PLC variables for remote monitoring and interaction through **UaExpert**.
 
