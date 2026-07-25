@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.14.0</Version>
+    <SymbolConfigObject version="4.7.0.0" runtimeid="3.5.22.20" libversion="4.6.0.0" compiler="3.5.22.20" lmm="3.5.22.20" profile="CODESYS V3.5 SP22 Patch 2+" settings="SupportOPCUA, LayoutCalculator=OptimizedClientSideLayoutCalculator" />
+    <ProjectInfo name="AquaControl_OPCUA" devicename="CODESYS_Control_Win_V3" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_REAL" size="4" swapsize="4" typeclass="Real" iecname="REAL" />
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="GVL">
+        <Node name="Anforderung" type="T_BOOL" access="ReadWrite" />
+        <Node name="AutoEin" type="T_BOOL" access="ReadWrite" />
+        <Node name="EIN" type="T_BOOL" access="ReadWrite" />
+        <Node name="Level" type="T_REAL" access="ReadWrite" />
+        <Node name="ManuelTaste" type="T_BOOL" access="ReadWrite" />
+        <Node name="Pumpe" type="T_BOOL" access="ReadWrite" />
+        <Node name="Regen" type="T_BOOL" access="ReadWrite" />
+        <Node name="Ventil" type="T_BOOL" access="ReadWrite" />
+        <Node name="Verbrauch" type="T_REAL" access="ReadWrite" />
+      </Node>
+      <Node name="Steuerung">
+        <Node name="BewaesserungAktiv" type="T_BOOL" access="ReadWrite" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>
