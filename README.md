@@ -41,7 +41,9 @@ The project combines PLC programming, process simulation, HMI visualization and 
 ## System Architecture
 
 <p align="center">
-    <img src="docs/diagrams/AquaControl.jpg" width="900">
+    <a href="https://app.diagrams.net/#G1J8eymbwmqrkZVh_oXr2aJno10cOFN5az#%7B%22pageId%22%3A%22SIOvtTyLQ3Kl_L9EAiRQ%22%7D">
+  <img src="docs/diagrams/AquaControl.jpg" width="900" alt="AquaControl Architecture">
+</a>
 </p>
 
 The application consists of three main components:
