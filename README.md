@@ -132,14 +132,13 @@ AquaControl/
 │   └── Aqua_Control_UaExpert.uap
 │
 └── docs/
-    ├── architecture/
-    │   └── architecture.png
-    │
     ├── diagrams/
+    │   └── AquaControl.jpg
     │
     └── screenshots/
         ├── HMI.png
         └── UA_Expert.png
+        └── Video.mp4
 ```
 
 ---
